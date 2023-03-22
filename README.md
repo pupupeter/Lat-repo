@@ -6,3 +6,6 @@
 系級:歷史系1年級
 
 課程筆記區、作業連結區、專題連結區
+
+作業1:
+https://github.com/pupupeter/Lat-repo/blob/main/20230315%E7%9A%84%E4%BD%9C%E6%A5%AD.ipynb
