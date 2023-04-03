@@ -9,3 +9,9 @@
 
 作業1:
 https://github.com/pupupeter/Lat-repo/blob/main/20230315%E7%9A%84%E4%BD%9C%E6%A5%AD.ipynb
+
+
+
+作業2:
+https://github.com/pupupeter/Lat-repo/blob/main/20230315%E7%9A%84%E4%BD%9C%E6%A5%AD.ipynb
+(承接作業1數據)
