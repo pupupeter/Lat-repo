@@ -1,6 +1,0 @@
-{   
-    "ENDPOINT":"https://hi-data-science-peter-since-20230426.cognitiveservices.azure.com/",
-    "TEXT_ANALYTICS_API_KEY":"70d35fffb3ae45efb8cf611675ffe7bf",
-    "CHANNEL_ACCESS_TOKEN":"n37E/gWOI0Q0/lKGsvCruDA1xpwv+p/m+4HxFlJlJG8J2fIjpEshXmklAHoQsBmzzXxbfUPuI6bDGVCX1Dr/SHLWJ22E25WmqF0fF+q1VM7/Hf8uTN5kTvm7fU7x3IaQxLd/Qe00OKUtsSGJRKtO/AdB04t89/1O/w1cDnyilFU=  LINE TOKEN",
-    "CHANNEL_SECRET":"19135c5e632247c8e285ade00f4ce1fa"
-}
