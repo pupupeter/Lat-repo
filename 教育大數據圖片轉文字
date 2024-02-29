@@ -1,0 +1,38 @@
+!pip install Pillow
+from google.colab import drive
+drive.mount('/content/gdrive')
+from PIL import Image
+
+# 讀取圖像檔案
+image = Image.open("/content/gdrive/My Drive/images.jpeg")
+
+# 顯示圖像
+image.show
+
+--------------------------
+
+from google.colab import drive
+drive.mount('/content/gdrive')
+
+from PIL import Image
+from transformers import pipeline
+
+## Define the function of image-to-text
+def image2text(img_url):
+    imagetotext = pipeline("image-to-text", model="Salesforce/blip-image-captioning-large")
+    text = imagetotext(img_url)[0]["generated_text"]
+    print(text)
+    return text
+
+# 重新設定圖片路徑
+image_path = '/content/gdrive/My Drive/images.jpeg'
+
+try:
+    # 顯示圖片
+    image = Image.open(image_path)
+    image.show()
+
+    # 呼叫 image2text 函數
+    image2text(image_path)
+except Exception as e:
+    print("發生錯誤:", e)
