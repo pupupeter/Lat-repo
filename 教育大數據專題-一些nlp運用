@@ -40,7 +40,7 @@ qa(question , context)
 
 ----------------------------------------------------------
 
-配合hugging face 網址https://www.youtube.com/watch?v=U5zDXah1bdA的18:38
+#配合hugging face 網址https://www.youtube.com/watch?v=U5zDXah1bdA的18:38
 
 
 from transformers import AutoModelForSequenceClassification , AutoTokenizer
