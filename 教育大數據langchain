@@ -1,0 +1,35 @@
+!pip install langchain
+!pip install openai
+!pip install google-search-results
+!pip install unstructured
+!pip install chromadb
+!pip install pinecone-client
+!pip install youtube-transcript-api
+!pip install pytube
+
+import os
+os.environ["OPENAI_API_KEY"] = '自己的api Key'
+
+from langchain.llms import OpenAI
+
+llm = OpenAI(model_name="gpt-3.5-turbo-instruct",max_tokens=1024)
+llm("如何利用open ai模仿自己的聲音來說外語，並含有抑揚頓挫的口氣，且結合當地所擁有的語料庫，讓ai適度修改我的句子，以利達成當地人的說話方法，")
+
+-----------------------------------------------
+import os
+from langchain.llms import OpenAI
+
+# 設 OpenAI API 金鑰
+os.environ["OPENAI_API_KEY"] = '自己的api key'
+
+# OpenAI 模型
+llm = OpenAI(model_name="gpt-3.5-turbo-instruct", max_tokens=1024)
+
+# 用戶輸入問題
+user_question = input("請輸入你的問題: ")
+
+# 用 OpenAI 模型回答我的問題
+ai_response = llm(user_question)
+
+#  AI 的回答
+print("AI的回答:", ai_response)
