@@ -1,0 +1,30 @@
+!pip install gTTS
+from gtts import gTTS
+
+text_to_say = "아녕하세요 허가이라고 합니다 ,역사학과 학생입니다 "
+
+language = "ko"
+
+gtts_object = gTTS(text = text_to_say,
+                  lang = language,
+                  slow = False)
+
+gtts_object.save("/content/gtts.wav")
+
+from IPython.display import Audio
+
+Audio("/content/gtts.wav")
+--------------------------------------
+text_to_say = "你好我是許家瑋 "
+
+language = "zh-Tw"
+
+gtts_object = gTTS(text = text_to_say,
+                  lang = language,
+                  slow = False)
+
+gtts_object.save("/content/gtts2.wav")
+
+from IPython.display import Audio
+
+Audio("/content/gtts2.wav"
