@@ -1,3 +1,5 @@
+//大部分的CODE我沒有改變，我延續作業4的信心指數內容，可以讓網頁分析圖片時，也讓人知道AI準確性高不高
+
 $(document).ready(function(){
   //do something
   $("#thisButton").click(function(){

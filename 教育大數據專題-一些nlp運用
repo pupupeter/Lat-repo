@@ -1,0 +1,53 @@
+
+#情感分析
+!pip install transformers datasets
+
+from transformers import pipeline
+classifier = pipeline("sentiment-analysis")
+classifier("so hard")
+-----------------------
+#文本分析
+generator = pipeline("text-generation")
+
+generator("I would tell you a story.")
+
+---------------------------
+#問答
+qa=pipeline("question-answering")
+context="""
+When did people first experience the joy of the hula hoop? Although the term did not emerge until the
+18th century, toy hoops twirled around the waist, limbs, or neck can be traced back to ancient times. As early
+as 1000 BC, Egyptian children played with hoop toys of dried grapevine. They threw, jumped, and slung
+them around their bodies as we do today. They also struck them with sticks to roll them down the road.
+Hoop rolling was also popular in ancient Greece. Their hoops, often made of metal, were not merely toys
+for Greek children but served as exercise devices as well.
+In the 14th century, hoops were popular as a form of recreation in Great Britain. The craze for hoops
+even resulted in dislocated backs and heart attacks, according to medical records. The term “hula,” however,
+did not enter the English language until the 1700s, when British sailors first witnessed hula dancing in the
+Hawaiian Islands. Though no hoops were used, the movements of the ritual dances looked very similar to
+those in hooping. Thus “hula” and “hoop” came together, resulting in the term “hula hooping.”
+Hoops spun their way through the cultures of pre-colonial America as well. Often considered as
+representing the circle of life, hoops featured prominently in the ritual dances of Native Americans. Dancers
+used small reed hoops as symbolic representations of animals such as eagles or snakes. With very rapid
+movements, they used the hoops to construct the symbolic forms around their bodies.
+The hula hoop gained international popularity in the late 1950s, when a plastic version was
+successfully marketed by California’s Wham-O toy company. Twenty-five million plastic hoops were sold
+in less than four months. The hula hoop “fad” is still going strong today.
+"""
+question = "According to the passage, what materials have been used for making hoops?"
+qa(question , context)
+
+
+----------------------------------------------------------
+
+#配合hugging face 網址https://www.youtube.com/watch?v=U5zDXah1bdA的18:38
+
+
+from transformers import AutoModelForSequenceClassification , AutoTokenizer
+model =AutoModelForSequenceClassification.from_pretrained("IDEA-CCNL/Erlangshen-Roberta-110M-Sentiment")
+tokenizer =AutoTokenizer.from_pretrained("IDEA-CCNL/Erlangshen-Roberta-110M-Sentiment")
+
+from transformers import pipeline
+classifier = pipeline("sentiment-analysis",model=model , tokenizer=tokenizer)
+
+classifier("程式設計讓我要瘋了嗚嗚嗚")
