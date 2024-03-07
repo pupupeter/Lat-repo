@@ -38,8 +38,11 @@ https://github.com/pupupeter/Lat-repo/blob/main/textsentimentbot/index.js
 一些教育大數據的東東
 0229-https://github.com/pupupeter/Lat-repo/blob/main/%E5%9C%96%E7%9A%84%E9%81%8B%E7%94%A8(%E4%BD%86%E6%9C%89%E9%BB%9E%E4%BA%82%E5%96%94)/%E8%A3%A1%E9%9D%A2%E6%98%AF%E4%BA%82%E5%8F%96%E7%9A%84%E5%B0%8D%E4%B8%8D%E8%B5%B7/.ipynb_checkpoints/Untitled1-checkpoint.ipynb
 
-0307-https://github.com/pupupeter/Lat-repo/blob/main/text_speech%E9%81%8B%E7%94%A8gradio.ipynb
+0307-圖形的運用:
+https://github.com/pupupeter/Lat-repo/tree/main/%E5%9C%96%E7%9A%84%E9%81%8B%E7%94%A8(%E4%BD%86%E6%9C%89%E9%BB%9E%E4%BA%82%E5%96%94)/%E8%A3%A1%E9%9D%A2%E6%98%AF%E4%BA%82%E5%8F%96%E7%9A%84%E5%B0%8D%E4%B8%8D%E8%B5%B7
 
 text-speech的google colab:
 
 https://colab.research.google.com/drive/1cgHZh3C1IoltZqcz8j5kgrtsIpjifSEe?hl=zh-tw#scrollTo=jj3JdWr4ayOg
+
+
