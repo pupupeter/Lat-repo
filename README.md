@@ -34,4 +34,4 @@ https://github.com/pupupeter/Lat-repo/blob/main/textsentimentbot/index.js
 
 
 一些教育大數據的東東
-0229-圖的運用(但有點亂喔)/裡面是亂取的對不起
+0229-https://github.com/pupupeter/Latrepo/blob/main/%E5%9C%96%E7%9A%84%E9%81%8B%E7%94%A8(%E4%BD%86%E6%9C%89%E9%BB%9E%E4%BA%82%E5%96%94)/%E8%A3%A1%E9%9D%A2%E6%98%AF%E4%BA%82%E5%8F%96%E7%9A%84%E5%B0%8D%E4%B8%8D%E8%B5%B7/%E4%B8%80%E4%BA%9B%E5%9C%96%E7%9A%84%E9%81%8B%E7%94%A8.ipynb)https://github.com/pupupeter/Lat-repo/blob/main/%E5%9C%96%E7%9A%84%E9%81%8B%E7%94%A8(%E4%BD%86%E6%9C%89%E9%BB%9E%E4%BA%82%E5%96%94)/%E8%A3%A1%E9%9D%A2%E6%98%AF%E4%BA%82%E5%8F%96%E7%9A%84%E5%B0%8D%E4%B8%8D%E8%B5%B7/%E4%B8%80%E4%BA%9B%E5%9C%96%E7%9A%84%E9%81%8B%E7%94%A8.ipynb
