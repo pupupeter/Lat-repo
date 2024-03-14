@@ -46,3 +46,6 @@ text-speech的google colab:
 https://colab.research.google.com/drive/1cgHZh3C1IoltZqcz8j5kgrtsIpjifSEe?hl=zh-tw#scrollTo=jj3JdWr4ayOg
 
 
+0314-gradio with open ai 並把中文翻譯成韓文
+https://colab.research.google.com/drive/1cgHZh3C1IoltZqcz8j5kgrtsIpjifSEe?hl=zh-tw#scrollTo=jj3JdWr4ayOg
+
