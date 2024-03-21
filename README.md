@@ -50,3 +50,7 @@ https://colab.research.google.com/drive/1cgHZh3C1IoltZqcz8j5kgrtsIpjifSEe?hl=zh-
 
 https://colab.research.google.com/drive/1cgHZh3C1IoltZqcz8j5kgrtsIpjifSEe?hl=zh-tw#scrollTo=jj3JdWr4ayOg
 
+
+0321-下拉式選單與改變語態
+
+https://github.com/pupupeter/Lat-repo/blob/main/03212%E7%9A%84%E8%AA%9E%E6%B3%95
