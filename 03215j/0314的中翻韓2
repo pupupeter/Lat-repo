@@ -1,0 +1,71 @@
+import gradio as gr
+import openai
+
+openai.api_key = "your api"
+
+
+
+
+def translate_text(text, target_language="Korean"):
+    response = openai.Completion.create(
+        engine="gpt-3.5-turbo-instruct",
+        prompt=f"Translate the following text into {target_language}: {text}\n",
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+    return response.choices[0].text.strip()
+
+examples = [
+    ["晚安我要來睡覺了"],
+    ["我想讓我的韓文變厲害"]
+]
+
+def remove_semilang(sentence):
+    # 如果句尾有 "하다"，则将其替换成 "해"
+    if sentence.endswith("하다"):
+        return sentence[:-2] + "해"  # 将 "하다" 替换成 "해"
+    elif sentence.endswith("다"):  # 如果句尾仅为 "다"
+        return sentence[:-1]  # 删除末尾的 "다"
+    elif sentence.endswith("합니다"):  # 如果句尾仅为 "다"
+        return sentence[:-3]  # 删除末尾的 "다"
+    elif sentence.endswith("세요"):  # 如果句尾仅为 "다"
+        return sentence[:-2]  # 删除末尾的 "다"
+    else:
+        return sentence
+
+
+
+def translate_text_half(sentence, target_language="Korean"):
+    response = openai.Completion.create(
+        engine="gpt-3.5-turbo-instruct",
+        prompt=f"Translate the following text into {target_language}: {sentence}\nAnd in the form of semi-language, it is removing the direct form of '다' in adj/v.\n",
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+    translated = response.choices[0].text.strip()
+    # 调用去除半语函数
+    return remove_semilang(translated)
+
+with gr.Blocks() as demo:
+    gr.Markdown("翻譯成韓文")
+    
+    with gr.Tab("一般"):
+        with gr.Column():
+            text_input = gr.Textbox(label="請輸入文本")
+            text_output = gr.Textbox(label="翻譯結果")
+            text_button = gr.Button("翻譯")
+
+    with gr.Tab("半語"):
+        with gr.Column():
+            text_input1 = gr.Textbox(label="請輸入文本")
+            text_output1 = gr.Textbox(label="翻譯結果")
+            text_button1 = gr.Button("翻譯")
+
+    text_button.click(translate_text, inputs=text_input, outputs=text_output)
+    text_button1.click(translate_text_half, inputs=text_input1, outputs=text_output1)
+
+demo.launch()
