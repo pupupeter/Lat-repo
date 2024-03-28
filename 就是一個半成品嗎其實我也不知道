@@ -8,7 +8,7 @@ import openai
 from gtts import gTTS
 from IPython.display import Audio
 import os
-openai.api_key = "你自己的api"
+openai.api_key = "你自已的api"
 
 
 def translate_text(text, wordtype, target_language="Korean"):
@@ -63,9 +63,18 @@ def text_to_speech(text):
     gtts_object = gTTS(text=text, lang=language, slow=False)
     gtts_object.save("/content/gtts6.wav") 
     return "/content/gtts6.wav"  
-
+def translate_text2(text, target_language="English"):
+    response = openai.Completion.create(
+        engine="gpt-3.5-turbo-instruct",
+        prompt=f"請直接給我對應的翻譯字或句子: {text}\n",
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+    return response.choices[0].text.strip()
 with gr.Blocks() as demo:
-    gr.Markdown("翻譯成韓文")
+    gr.Markdown("翻譯成韓文，不然我真的會gg耶，拜託拜託")
 
     with gr.Tab("一般"):
         with gr.Column():
@@ -85,8 +94,13 @@ with gr.Blocks() as demo:
             text_input2 = gr.Textbox(label="請輸入文本")
             text_output2 = gr.Audio(label="音檔")
             text_button2 = gr.Button("轉換")
+    with gr.Tab("英文"):
+        with gr.Column():
+            text_input3 = gr.Textbox(label="請輸入文本")
+            text_output3 = gr.Textbox(label="翻譯結果")
+            text_button3 = gr.Button("翻譯")
     text_button.click(translate_text, inputs=[text_input, wordtype_input], outputs=text_output)
     text_button1.click(translate_text_half, inputs=[text_input1, wordtype_input1], outputs=text_output1)
     text_button2.click(text_to_speech, inputs=text_input2, outputs=text_output2)
-
+    text_button3.click(translate_text2, inputs=text_input3, outputs=text_output3)
 demo.launch()
