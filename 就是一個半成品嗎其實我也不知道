@@ -1,0 +1,92 @@
+!pip install gTTS
+pip install -U gradio
+pip install openai
+!pip install openai==0.28
+-----------------------------
+import gradio as gr
+import openai
+from gtts import gTTS
+from IPython.display import Audio
+import os
+openai.api_key = "你自己的api"
+
+
+def translate_text(text, wordtype, target_language="Korean"):
+    response = openai.Completion.create(
+        engine="gpt-3.5-turbo-instruct",
+        prompt=f"請直接給我對應的翻譯字，且不需要給我音譯音，使用 {target_language} 以 {wordtype} 執行: {text}\n",
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+    return response.choices[0].text.strip()
+
+examples = [
+    ["晚安我要來睡覺了"],
+    ["我想讓我的韓文變厲害"]
+]
+
+def remove_semilang(sentence):
+
+    if sentence.endswith("하다"):
+        return sentence[:-2] + "해"
+    elif sentence.endswith("다"):
+        return sentence[:-1]
+    elif sentence.endswith("합니다"):
+        return sentence[:-3]
+    elif sentence.endswith("세요"):
+        return sentence[:-2]
+    elif sentence.endswith("하기"):
+        return sentence[:-1] + "해"
+    elif sentence.endswith("기"):
+        return sentence[:-1]
+    else:
+        return sentence
+
+
+
+def translate_text_half(sentence,verb, wordtype, target_language="Korean"):
+    response = openai.Completion.create(
+        engine="gpt-3.5-turbo-instruct",
+        prompt=f"請直接給我對應的翻譯字，且不需要給我音譯音，使用 {target_language} 以 {wordtype} 執行: {sentence}\n",
+        max_tokens=200,
+        n=1,
+        stop=None,
+        temperature=0.7,
+    )
+    translated = response.choices[0].text.strip()
+    
+    return remove_semilang(translated)
+def text_to_speech(text):
+    language = "ko"
+    gtts_object = gTTS(text=text, lang=language, slow=False)
+    gtts_object.save("/content/gtts6.wav") 
+    return "/content/gtts6.wav"  
+
+with gr.Blocks() as demo:
+    gr.Markdown("翻譯成韓文")
+
+    with gr.Tab("一般"):
+        with gr.Column():
+            text_input = gr.Textbox(label="請輸入文本")
+            wordtype_input = gr.Radio(choices=["動詞", "名詞","形容詞"], label="請選擇詞類")
+            text_output = gr.Textbox(label="翻譯結果")
+            text_button = gr.Button("翻譯")
+
+    with gr.Tab("半語"):
+        with gr.Column():
+            text_input1 = gr.Textbox(label="請輸入文本")
+            wordtype_input1 = gr.Radio(choices=["動詞", "名詞","形容詞"], label="請選擇詞類")
+            text_output1 = gr.Textbox(label="翻譯結果")
+            text_button1 = gr.Button("翻譯")
+    with gr.Tab("音檔"):
+        with gr.Column():
+            text_input2 = gr.Textbox(label="請輸入文本")
+            text_output2 = gr.Audio(label="音檔")
+            text_button2 = gr.Button("轉換")
+    text_button.click(translate_text, inputs=[text_input, wordtype_input], outputs=text_output)
+    text_button1.click(translate_text_half, inputs=[text_input1, wordtype_input1], outputs=text_output1)
+    text_button2.click(text_to_speech, inputs=text_input2, outputs=text_output2)
+
+demo.launch()
