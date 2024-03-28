@@ -54,3 +54,7 @@ https://colab.research.google.com/drive/1cgHZh3C1IoltZqcz8j5kgrtsIpjifSEe?hl=zh-
 0321-下拉式選單與改變語態
 
 https://github.com/pupupeter/Lat-repo/blob/main/03212%E7%9A%84%E8%AA%9E%E6%B3%95
+
+
+0328--半成品 吧
+https://github.com/pupupeter/Lat-repo/blob/main/%E5%B0%B1%E6%98%AF%E4%B8%80%E5%80%8B%E5%8D%8A%E6%88%90%E5%93%81%E5%97%8E%E5%85%B6%E5%AF%A6%E6%88%91%E4%B9%9F%E4%B8%8D%E7%9F%A5%E9%81%93
