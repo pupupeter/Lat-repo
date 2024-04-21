@@ -63,3 +63,9 @@ https://github.com/pupupeter/Lat-repo/blob/main/%E5%B0%B1%E6%98%AF%E4%B8%80%E5%8
 
 
 https://github.com/pupupeter/Lat-repo/blob/main/pdf%E6%8F%90%E5%8F%96
+
+
+0421-- 論文翻譯
+
+
+https://github.com/pupupeter/Lat-repo/blob/main/pdf%E8%AB%96%E6%96%87%E5%AD%98%E5%8F%96%2B%E7%BF%BB%E8%AD%AF.py
