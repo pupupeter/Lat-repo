@@ -73,3 +73,5 @@ https://github.com/pupupeter/Lat-repo/blob/main/pdf%E8%AB%96%E6%96%87%E5%AD%98%E
 
 0502-- 專題全
 
+
+https://github.com/pupupeter/Lat-repo/blob/main/%E5%B0%88%E9%A1%8C%E5%85%A8%20(3).py
