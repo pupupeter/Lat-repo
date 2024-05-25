@@ -79,3 +79,5 @@ https://github.com/pupupeter/Lat-repo/blob/main/%E5%B0%88%E9%A1%8C%E5%85%A8%20(3
 
 
 0525-- 專題最終版-->全部的功能from hugging face model
+
+https://github.com/pupupeter/Lat-repo/blob/main/%E5%B0%88%E9%A1%8C%E9%87%8D%E6%94%B9%E5%9B%A0%E7%82%BAopenai%E6%95%B4%E6%88%91%E6%89%80%E4%BB%A5%E6%88%91%E7%94%A8huggingface%E6%88%91%E7%9A%84%E7%A5%9E.ipynb
