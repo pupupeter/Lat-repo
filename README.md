@@ -85,3 +85,4 @@ https://github.com/pupupeter/Lat-repo/blob/main/%E5%B0%88%E9%A1%8C%E9%87%8D%E6%9
 
 0525-- 類似專題2的東西?
 
+https://github.com/pupupeter/Lat-repo/blob/main/%E6%88%91%E8%A6%BA%E5%BE%97%E5%A5%BD%E5%A5%BD%E7%AC%91.py
